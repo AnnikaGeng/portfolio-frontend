@@ -1,6 +1,5 @@
 import React from 'react'
 import './Projects.scss'
-import noteKeeper from '../../assets/noteKeeper.png'
 import {TbBrandHtml5, TbBrandCss3, TbBrandReact,TbBrandMongodb} from 'react-icons/tb'
 import {DiNodejsSmall} from 'react-icons/di'
 
@@ -32,7 +31,7 @@ const Projects = ({sectionsRef}) => {
             </div>
         </div>
         <div className='previewImg'>
-        <img className='projectDetail' src={noteKeeper} alt='this is preview for the project'/>
+        <img className='projectDetail' src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255273/noteKeeper_fkinii.png" alt='this is preview for the project'/>
         </div>
     </div>
     

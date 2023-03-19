@@ -1,9 +1,8 @@
 import React from 'react'
 import { useRef, useEffect, useState } from 'react'
 import './home.scss'
-import code2 from '../../assets/product.png'
 import Navigator from '../../conponents/navigator/Navigator'
-import avatar from '../../assets/Avatar.png'
+// import avatar from '../../assets/Avatar.png'
 import Skillset from '../skillset/Skillset'
 import Projects from '../project/Projects'
 // import { useInView } from 'react-intersection-observer'
@@ -56,13 +55,13 @@ const Home = () => {
             </nav>
         </header>
         <section className='container' id='home' ref={(el) => (sectionsRef.current[0] = el)}>
-          <img className='code2' src={code2} alt="code2" />
+          <img className='code2' src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255268/product_l1fsn8.png" alt="code2" />
           <div className='name-intro'>
             {/* name and brush */}
             <h1>Yi <span className='myName'>Geng</span> - Full Stack Developer</h1>
             {/* detail introduction and bar */}
             <div className='introduction'>
-              <img className='avatar' src={avatar} alt='my avatar' />
+              <img className='avatar' src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255266/Avatar_wqoo1n.png" alt='my avatar' />
               <p ><span className='tag'>&lt;H1 &gt;</span>
               Hi! <br/>
               My name is Yi Geng, <br />
