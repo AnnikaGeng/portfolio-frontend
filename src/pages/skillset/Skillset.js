@@ -7,9 +7,9 @@ import {DiNodejsSmall} from 'react-icons/di'
 import {AiFillGithub} from 'react-icons/ai'
 import {SiSpringboot} from 'react-icons/si'
 
-const Skillset = () => {
+const Skillset = ({sectionsRef}) => {
   return (
-    <section className='skill_container'>
+    <section className='skill_container' id='skillset' ref={(el) => (sectionsRef.current[2] = el)}>
         <h1>My Skill Set</h1>
         
         <div className='skillset'>

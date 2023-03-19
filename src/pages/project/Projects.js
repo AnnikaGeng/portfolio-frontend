@@ -4,9 +4,9 @@ import noteKeeper from '../../assets/noteKeeper.png'
 import {TbBrandHtml5, TbBrandCss3, TbBrandReact,TbBrandMongodb} from 'react-icons/tb'
 import {DiNodejsSmall} from 'react-icons/di'
 
-const Projects = () => {
+const Projects = ({sectionsRef}) => {
   return (
-    <section className='projects'>
+    <section className='projects' id='projects' ref={(el) => (sectionsRef.current[1] = el)}>
     <h1>My projects</h1>
 
     {/* the project template */}
@@ -26,8 +26,9 @@ const Projects = () => {
             <TbBrandMongodb size={24} className='project_icons' />
             </div>
             <div className='btn btn-detail'>
-                <a href='www.google.com'>View It Here</a>
-                <a href='www.google.com'>View Github Repo</a>
+                <a href='https://keeper-frontend.onrender.com' target='_blank' rel='noreferrer'
+                >View It Here</a>
+                <a href='https://github.com/AnnikaGeng/keeper-frontend' target='_blank' rel='noreferrer'>View Github Repo</a>
             </div>
         </div>
         <div className='previewImg'>

@@ -1,15 +1,42 @@
 import React from 'react'
+import { useRef, useEffect, useState } from 'react'
 import './home.scss'
 import code2 from '../../assets/product.png'
 import Navigator from '../../conponents/navigator/Navigator'
 import avatar from '../../assets/Avatar.png'
 import Skillset from '../skillset/Skillset'
 import Projects from '../project/Projects'
+// import { useInView } from 'react-intersection-observer'
+
+
 
 const Home = () => {
+
+    const [activeSection, setActiveSection] = useState(null);
+    const sectionsRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+            }
+            });
+        },
+        { threshold: 0.5 }
+        );
+
+        sectionsRef.current.forEach((section) => {
+        observer.observe(section);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+  
   return (
     <div className='home_page'>
-        <Navigator />
+        <Navigator activeSection={activeSection}/>
         <header className='header'>
             <nav>
                 <ul className='home-links'>
@@ -28,7 +55,7 @@ const Home = () => {
                 </ul>
             </nav>
         </header>
-        <section className='container'>
+        <section className='container' id='home' ref={(el) => (sectionsRef.current[0] = el)}>
           <img className='code2' src={code2} alt="code2" />
           <div className='name-intro'>
             {/* name and brush */}
@@ -48,8 +75,8 @@ const Home = () => {
 
         </section>
         
-        <Skillset />
-        <Projects />
+        <Skillset sectionsRef={sectionsRef} />
+        <Projects sectionsRef={sectionsRef} />
     </div>
   )
 }
