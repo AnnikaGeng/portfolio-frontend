@@ -1,0 +1,126 @@
+#contact{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    // border: 1px red solid;
+
+
+    .container {
+        margin: 0;
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        // border: 1px red solid;
+        
+        h1 {
+            // border: 1px red solid;
+            margin-top: 1em;
+        }
+
+        p {
+            margin: .2em 0;
+            font-size: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            input {
+                padding: 1em;
+                font-size: 1.2rem;
+                height: 50px;
+                margin-bottom: .5em;
+                border: 0;
+                border-radius: 10px;
+            }
+            .message {
+                height: 110px;
+                margin-bottom: 1em;
+            }
+            button {
+                height: 50px;
+                border-radius: 10px;
+                width: 50%;
+                background-color: aquamarine;
+            }
+        }
+        .find {
+            margin: .5em 0;
+        }
+
+        .social_media {
+            display: flex;
+            .icon {
+                margin-right: 1em;
+            }
+        }
+    }
+    
+    
+}
+
+@media (min-width:680px) {
+    #contact {
+        .container {
+            flex-direction: row;
+            padding: 3em 12em;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .contact_main {
+                // border: 1px red solid;
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                form {
+                    // height: 60%;
+
+                    input {
+                        border-bottom: 2px solid rgb(217, 26, 26);
+                        border-right: 2px solid rgb(217, 26, 26);
+                        box-shadow: 2px 2px 4px rgba(233, 108, 108, 0.3);
+                    }
+
+                    .message {
+                        height: 200px;
+                    }
+
+                    button {
+                        margin-top: 1em;
+                    }
+                }
+
+                h1 {
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: .5em;
+                    font-size: 3rem;
+                    // border: 1px red solid;
+                }
+                p {
+                    margin-bottom: 1em;
+                }
+            }
+
+            .contact_side {
+                width: 30%;
+                padding-top: 15%;
+
+                .social_media .icon {
+                    font-size: 2rem;
+                }
+            }
+
+            
+        }
+    }
+}

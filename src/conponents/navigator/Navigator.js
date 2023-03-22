@@ -27,7 +27,9 @@ function Navigator({activeSection}) {
                 <li className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>
                     <Link to='#projects' smooth={true}><img src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255268/terminal_dny0jn.svg" className='icon' alt='terminal icon'/></Link>
                 </li>
-                <li ><a href="https://github.com/AnnikaGeng"><img src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255270/prompt_w6js0a.svg" className='icon' alt='prompt icon'/></a></li>
+                <li className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}>
+                    <Link to='#contact' smooth={true}><img src="https://res.cloudinary.com/drk3j2xi8/image/upload/v1679255270/prompt_w6js0a.svg" className='icon' alt='prompt icon'/></Link>
+                </li>
             </ul>
         </nav>
     </div>

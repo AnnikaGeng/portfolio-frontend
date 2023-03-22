@@ -5,7 +5,7 @@ import Navigator from '../../conponents/navigator/Navigator'
 // import avatar from '../../assets/Avatar.png'
 import Skillset from '../skillset/Skillset'
 import Projects from '../project/Projects'
-// import { useInView } from 'react-intersection-observer'
+import Contact from '../contact/Contact'
 
 
 
@@ -76,6 +76,7 @@ const Home = () => {
         
         <Skillset sectionsRef={sectionsRef} />
         <Projects sectionsRef={sectionsRef} />
+        <Contact sectionsRef={sectionsRef} />
     </div>
   )
 }
