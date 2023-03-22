@@ -37,7 +37,9 @@ const Contact = ({sectionsRef}) => {
             name='email'
             value={email}
             onChange={handleInputChange} />
-            <input type='text'
+            <textarea
+            rows="5"
+            cols="35"
             placeholder='Message*'
             className='message'
             required
