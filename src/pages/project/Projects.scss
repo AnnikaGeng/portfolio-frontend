@@ -87,6 +87,7 @@
     .projects {
         // border: 1px red solid;
         box-sizing: border-box;
+        overflow: hidden;
         
         h1 {
             font-size: 3rem;
@@ -109,6 +110,7 @@
             flex-direction: row-reverse;
             justify-content: space-around;
             align-items: center;
+            overflow: hidden;
             
             .text-desc {
                 width: 45%;
